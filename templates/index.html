@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Primal to Dual Convertor</title>
+    </head>
+    <body>
+        <!-- INPUT FIELDS FOR PRIMAL OBJECTIVE FUNCTION -->
+        <h3>Enter Primal Objective Function</h3>
+        max z_p =
+        <input id="p1" size="1"> x1 +
+        <input id="p2" size="1"> x2
+        <!-- INPUT FIELDS FOR CONSTRAINTS -->
+        <h3>Enter Constraints</h3>
+        <!-- CONSTRAINT 1 -->
+        <input id="c11" size="1"> x1 +
+        <input id="c12" size="1"> x2 
+        <select id="op1">
+            <option value="<="><=</option>
+            <option value=">=">>=</option>
+            <option value="=">=</option>
+        </select>
+        <input id="c13" size="1">
+        <br><br>
+        <!-- CONSTRAINT 2 -->
+        <input id="c21" size="1"> x1 +
+        <input id="c22" size="1"> x2 
+        <select id="op2">
+            <option value="<="><=</option>
+            <option value=">=">>=</option>
+            <option value="=">=</option>
+        </select>
+        <input id="c23" size="1">
+        <br><br>
+        <!-- CONSTRAINT 3 -->
+        <input id="c31" size="1"> x1 +
+        <input id="c32" size="1"> x2 
+        <select id="op3">
+            <option value="<="><=</option>
+            <option value=">=">>=</option>
+            <option value="=">=</option>
+        </select>
+        <input id="c33" size="1">
+        <br><br>
+        <!-- SUBMIT BUTTON -->
+        <button id="submit" onclick="transform()">Find Dual Problem</button><br><br>
+        <!-- SPACE FOR PUBLISHING RESULT -->
+        <div id="result1"></div><br>
+        <div id="result2"></div><br>
+        <div id="result3"></div><br>
+        <div id="result4"></div><br>
+        <!-- JS SOURCE FILE -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        </body>
+</html>
